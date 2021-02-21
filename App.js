@@ -1,13 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Dashboard from "./components/Dashboard";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Verify from "./components/Verify";
+
+const Stack = createStackNavigator();
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Verify">
+        <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name = "Login" component = {Login} options={{ title: 'FISH FARM' }}/>
+        <Stack.Screen name = "Signup" component = {Signup} options={{ title: 'FISH FARM' }}/>
+        <Stack.Screen name = "Verify" component = {Verify} options={{ title: 'FISH FARM' }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

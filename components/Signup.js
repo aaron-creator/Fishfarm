@@ -6,7 +6,25 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 class Signup extends Component{
     constructor(props){
         super(props);
+
+        this.onSelectInput = this.onSelectInput.bind(this);
+        this.onDeselectInput = this.onDeselectInput.bind(this);
+        this.state={
+            bgcolor:"#ededed",
+            passvalue:true,
+        };
     }
+
+    onSelectInput(){
+        this.setState({bgcolor:"blue"});
+    }
+    onDeselectInput(){
+        this.setState({bgcolor:"#ededed"});
+    }
+    onDisablePassword(){
+        this.setState({passvalue:false});
+    }
+
     render(){
         return(
             <ScrollView style={styles.container}>
@@ -20,24 +38,32 @@ class Signup extends Component{
                 <Text style={{fontSize:20, marginTop:20,marginLeft:20}}><Text style={{fontWeight:"bold"}}>Create</Text> Account</Text>
                 <View style={styles.inputholder}>
                     <TextInput 
-                    style={styles.txtinput}
+                    style={[styles.txtinput,{borderColor:this.state.bgcolor}]}
                     keyboardType="ascii-capable"
                     placeholder="Farm Name"
+                    onFocus={this.onSelectInput}
+                    onBlur={this.onDeselectInput}
                     />
                     <TextInput 
-                    style={styles.txtinput}
+                    style={[styles.txtinput,{borderColor:this.state.bgcolor}]}
                     keyboardType="email-address"
                     placeholder="Email"
+                    onFocus={this.onSelectInput}
+                    onBlur={this.onDeselectInput}
                     />
                     <TextInput 
-                    style={styles.txtinput}
+                    style={[styles.txtinput,{borderColor:this.state.bgcolor}]}
                     keyboardType="number-pad"
                     placeholder="Mobile"
+                    onFocus={this.onSelectInput}
+                    onBlur={this.onDeselectInput}
                     />
                     <TextInput 
-                    style={styles.txtinput}
-                    secureTextEntry={true}
+                    style={[styles.txtinput,{borderColor:this.state.bgcolor}]}
+                    secureTextEntry={this.state.passvalue}
                     placeholder="Password"
+                    onFocus={this.onSelectInput}
+                    onBlur={this.onDeselectInput}
                     />
                     <View style={{flexDirection:"row", justifyContent:"center", marginTop: 50, marginBottom: 5}}>
                         <Text style={{textAlign:"center"}}> I agree to the<Text style={{color:"blue"}} onPress={()=> console.log("create Account")}>Terms and conditions</Text></Text>
@@ -86,6 +112,8 @@ const styles = StyleSheet.create({
         marginRight:20,
         backgroundColor:"#fff",
         padding:10,
+        borderWidth:2,
+        borderColor:"#ededed",
     },
     inputholder:{
         width:"100%",

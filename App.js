@@ -18,11 +18,22 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Dashboard">
+      <Stack.Navigator initialRouteName="Login" 
+        screenOptions={{
+          headerTitleAlign: "center",
+
+          headerStyle: {
+              backgroundColor: "#3740FE",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+              fontWeight: "bold",
+          },
+          headerShown: false,
+      }}
+      >
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'FISH FARM' }}/>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Favourites" component={Favourites} />
-        <Stack.Screen name = "Login" component = {Login} options={{ title: 'FISH FARM' }}/>
+        <Stack.Screen name = "Login" component = {Login} />
         <Stack.Screen name = "Signup" component = {Signup} options={{ title: 'FISH FARM' }}/>
         <Stack.Screen name = "Verify" component = {Verify} options={{ title: 'FISH FARM' }}/>
       </Stack.Navigator>

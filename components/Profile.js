@@ -9,7 +9,7 @@ class Profile extends Component{
     render(){
         return(
             <View>
-                <Text>This is Favourites.</Text>
+                <Text>This is Profile.</Text>
                 <Text>what</Text>
                 <TouchableOpacity onPress ={() => console.log("Clicked")}>
                     <Text>Button</Text>

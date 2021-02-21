@@ -9,7 +9,7 @@ class Cart extends Component{
     render(){
         return(
             <View>
-                <Text>This is Favourites.</Text>
+                <Text>This is Cart.</Text>
                 <Text>what</Text>
                 <TouchableOpacity onPress ={() => console.log("Clicked")}>
                     <Text>Button</Text>

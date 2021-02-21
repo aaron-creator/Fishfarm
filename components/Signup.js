@@ -10,6 +10,13 @@ class Signup extends Component{
     render(){
         return(
             <ScrollView style={styles.container}>
+                <View style={styles.header}>
+                    <Image 
+                    style={styles.logoimg}
+                    source={require("../assets/logo.jpg")}
+                    />
+                    <Text style={{fontWeight:"bold",fontSize:20, lineHeight:70}}>FISH FARM</Text>
+                </View>
                 <Text style={{fontSize:20, marginTop:20,marginLeft:20}}><Text style={{fontWeight:"bold"}}>Create</Text> Account</Text>
                 <View style={styles.inputholder}>
                     <TextInput 
@@ -32,7 +39,7 @@ class Signup extends Component{
                     secureTextEntry={true}
                     placeholder="Password"
                     />
-                    <View style={{flexDirection:"row", justifyContent:"center", marginTop: 100, marginBottom: 5}}>
+                    <View style={{flexDirection:"row", justifyContent:"center", marginTop: 50, marginBottom: 5}}>
                         <Text style={{textAlign:"center"}}> I agree to the<Text style={{color:"blue"}} onPress={()=> console.log("create Account")}>Terms and conditions</Text></Text>
                     </View>
                 </View>
@@ -41,7 +48,7 @@ class Signup extends Component{
                     <Text style={{color:"#fff", textAlign:"center",padding:5}}>Create Account</Text>
                 </TouchableOpacity>
                 <View style={styles.bottomholder}>
-                    <Text style={{textAlign:"center"}}> Already a user ? <Text style={{color:"blue"}} onPress={()=> console.log("create Account")}>Login</Text></Text>
+                    <Text style={{textAlign:"center"}}> Already a user ? <Text style={{color:"blue"}} onPress={()=> this.props.navigation.navigate("Login")}>Login</Text></Text>
                 </View>
             </ScrollView>
             
@@ -49,11 +56,25 @@ class Signup extends Component{
     }
 }
 const styles = StyleSheet.create({
+    header:{
+        width:"100%",
+        justifyContent:"flex-start",
+        //backgroundColor:"green",
+        flexDirection:"row",
+        padding:10,
+        marginBottom:50,    
+    },
+    logoimg:{
+        width:50,
+        height:20,
+        alignSelf:"center",
+    },
     container:{
         width:"100%",
         display:"flex",
         flex:1,
         flexDirection:"column",
+        marginTop:20,
         //justifyContent:"flex-end",
         //backgroundColor:"red",
     },

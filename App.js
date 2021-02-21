@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Verify from "./components/Verify";
+import Favourites from "./components/Favourites";
 
 const Stack = createStackNavigator();
 
@@ -17,9 +18,10 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Verify">
-        <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Navigator initialRouteName="Dashboard">
+        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'FISH FARM' }}/>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Favourites" component={Favourites} />
         <Stack.Screen name = "Login" component = {Login} options={{ title: 'FISH FARM' }}/>
         <Stack.Screen name = "Signup" component = {Signup} options={{ title: 'FISH FARM' }}/>
         <Stack.Screen name = "Verify" component = {Verify} options={{ title: 'FISH FARM' }}/>

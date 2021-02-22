@@ -9,8 +9,8 @@ class Cart extends Component{
     render(){
         return(
             <View style={styles.container}>                       
-                <Text style={{fontSize:20, marginTop:10,marginLeft:20, marginBottom:35, textAlign:"center"}}><Text style={{fontWeight:"bold"}}>Cart</Text></Text>
-                <Text style={{fontSize:15,marginLeft:20, marginBottom:35, textAlign:"center"}}>You are in Cart section.</Text>
+                <Text style={styles.topLabel}>Cart</Text>
+                <Text style={styles.subLabel}>You are in Cart section.</Text>
             </View>
         );
     }
@@ -25,6 +25,20 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         paddingTop:10,
         //backgroundColor:"red",
+    },
+    topLabel:{
+        fontSize:20,
+        marginTop:10,
+        marginLeft:20, 
+        marginBottom:35, 
+        textAlign:"center",
+        fontWeight:"bold"
+    },
+    subLabel:{
+        fontSize:15,
+        marginLeft:20, 
+        marginBottom:35, 
+        textAlign:"center"
     },
     logbut:{
         borderRadius: 10,

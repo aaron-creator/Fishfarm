@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
         fontSize:15,
         marginLeft:20, 
         marginBottom:35, 
-        textAlign:"center"},
+        textAlign:"center"
+    },
     logbut:{
         borderRadius: 10,
         marginTop:10,

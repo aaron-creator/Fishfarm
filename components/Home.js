@@ -115,7 +115,7 @@ class Home extends Component{
                             style={{width:246,height:146,alignSelf:"center",marginTop:2, borderRadius:10}} 
                             />
                         </TouchableOpacity>
-                        
+
                     </ScrollView>
                     <Text style={{textAlign:"left" ,fontWeight:"bold", marginTop:15, marginLeft:15}}>Recommended for you</Text>
                     
@@ -147,8 +147,8 @@ class Home extends Component{
                                     <Text style={{fontSize:15,textAlign:"left",paddingLeft:10}}>4.5 <Text style={{fontSize:13, fontWeight:"normal", color:"grey"}}> Min Buy 5 pieces lenght 3cm</Text></Text>
                                     <Text style={{fontSize:15, fontWeight:"bold", textAlign:"left",paddingLeft:10}}>Rs 40 <Text style={{fontSize:15 , fontWeight:"normal", color:"grey"}}>/Piece</Text></Text>
                                 </View>
-                                <TouchableOpacity  style={styles.heartholder} onPress={() => console.log("heart selected")}>
-                                    <Image source={require("../assets/heart.png")}
+                                <TouchableOpacity  style={styles.heartholder} onPress={() => this.onHeartSelected()}>
+                                    <Image source={this.state.heartimg}
                                     style={styles.hearticon}
                                     />
                                 </TouchableOpacity>
@@ -164,8 +164,8 @@ class Home extends Component{
                                     <Text style={{fontSize:15,textAlign:"left",paddingLeft:10}}>4.5 <Text style={{fontSize:13, fontWeight:"normal", color:"grey"}}> Min Buy 5 pieces lenght 3cm</Text></Text>
                                     <Text style={{fontSize:15, fontWeight:"bold", textAlign:"left",paddingLeft:10}}>Rs 40 <Text style={{fontSize:15 , fontWeight:"normal", color:"grey"}}>/Piece</Text></Text>
                                 </View>
-                                <TouchableOpacity  style={styles.heartholder} onPress={() => console.log("heart selected")}>
-                                    <Image source={require("../assets/heart_selected.png")}
+                                <TouchableOpacity  style={styles.heartholder} onPress={() => this.onHeartSelected()}>
+                                    <Image source={this.state.heartimg}
                                     style={styles.hearticon}
                                     />
                                 </TouchableOpacity>

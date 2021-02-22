@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Verify from "./components/Verify";
 import Favourites from "./components/Favourites";
+import Mediumcard from "./components/Mediumcard";
 
 const Stack = createStackNavigator();
 
@@ -32,10 +33,11 @@ export default function App() {
           headerShown: false,
       }}
       >
-        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'FISH FARM' }}/>
+        <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name = "Login" component = {Login} />
-        <Stack.Screen name = "Signup" component = {Signup} options={{ title: 'FISH FARM' }}/>
-        <Stack.Screen name = "Verify" component = {Verify} options={{ title: 'FISH FARM' }}/>
+        <Stack.Screen name = "Signup" component = {Signup} />
+        <Stack.Screen name = "Verify" component = {Verify} />
+        <Stack.Screen name = "Mediumcard" component = {Mediumcard} />
       </Stack.Navigator>
     </NavigationContainer>
   );

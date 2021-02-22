@@ -70,7 +70,7 @@ class Signup extends Component{
                     </View>
                 </View>
                 
-                <TouchableOpacity style={styles.logbut} onPress ={()=>console.log("Clicked")}>
+                <TouchableOpacity style={styles.logbut} onPress ={()=> this.props.navigation.navigate("Verify")}>
                     <Text style={{color:"#fff", textAlign:"center",padding:5}}>Create Account</Text>
                 </TouchableOpacity>
                 <View style={styles.bottomholder}>

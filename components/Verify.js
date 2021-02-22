@@ -8,6 +8,13 @@ class Verify extends Component{
     render(){
         return(
             <View style={styles.container}>
+                <View style={styles.header}>
+                    <Image 
+                    style={styles.logoimg}
+                    source={require("../assets/logo.jpg")}
+                    />
+                    <Text style={{fontWeight:"bold",fontSize:20, lineHeight:70}}>FISH FARM</Text>
+                </View>
                 <Text style={{fontSize:20, marginTop:10,marginLeft:10, marginBottom:35}}><Text style={{fontWeight:"bold"}}>Enter</Text> OTP</Text>
                 <View style={styles.inputholder}>
                     <View style={{backgroundColor:"none"}}>
@@ -20,7 +27,7 @@ class Verify extends Component{
                 </View>
                 <View style={styles.voidspace}></View>
                 <View style={styles.voidspace}></View>
-                <TouchableOpacity style={styles.logbut} onPress ={()=>console.log("Clicked")}>
+                <TouchableOpacity style={styles.logbut} onPress ={()=> this.props.navigation.navigate("Login")}>
                     <Text style={{color:"#fff", textAlign:"center",padding:5}}>Verify</Text>
                 </TouchableOpacity>
             </View>
@@ -28,12 +35,25 @@ class Verify extends Component{
     }
 }
 const styles = StyleSheet.create({
+    header:{
+        width:"100%",
+        justifyContent:"flex-start",
+        //backgroundColor:"green",
+        flexDirection:"row",
+        padding:10,
+        marginBottom:80,    
+    },
+    logoimg:{
+        width:50,
+        height:20,
+        alignSelf:"center",
+    },
     container:{
         width:"100%",
         display:"flex",
         flex:1,
         flexDirection:"column",
-        justifyContent:"flex-end",
+        justifyContent:"center",
         //backgroundColor:"red",
     },
     txtinput:{

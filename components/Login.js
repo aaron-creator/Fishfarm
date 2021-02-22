@@ -54,7 +54,7 @@ class Login extends Component{
                     </View>
                 </View>
                 
-                <TouchableOpacity style={styles.logbut} onPress ={()=>console.log("Clicked")}>
+                <TouchableOpacity style={styles.logbut} onPress ={()=> this.props.navigation.navigate("Dashboard")}>
                     <Text style={{color:"#fff", textAlign:"center",padding:5}}>Login</Text>
                 </TouchableOpacity>
                 <Text style={{textAlign:"center" , marginTop:10}}> ──────── or Login with ────────</Text>

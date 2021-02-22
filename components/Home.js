@@ -38,18 +38,19 @@ class Home extends Component{
                 <ScrollView>
 
                     <View style={{flexDirection:"row", justifyContent:"space-between"}}>
-                        <Text style={{color:"black",fontWeight:"bold", marginLeft:15}} onPress={()=> console.log("Forget Password clicked")} >Farms around you</Text>
-                            <Text style={{color:"#808080", marginRight:20}} onPress={()=> console.log("Forget Password clicked")} >View All</Text>
+                        <Text style={{color:"black",fontWeight:"bold", marginLeft:15}} >Farms around you</Text>
+                            <Text style={{color:"#808080", marginRight:20}} >View All</Text>
                     </View>
                     <ScrollView horizontal={true}  style={styles.scroll1}>
                         
-                        <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
+                        <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Small Card Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
                             style={{width:40,height:40,alignSelf:"center",marginTop:5}} 
                             />
                             <Text style={{fontSize:10,textAlign:"center",marginTop:5}}>Angel Fisheries</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
@@ -57,6 +58,7 @@ class Home extends Component{
                             />
                             <Text style={{fontSize:10,textAlign:"center",marginTop:5}}>Jomel's Fisheries</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
@@ -64,6 +66,7 @@ class Home extends Component{
                             />
                             <Text style={{fontSize:10,textAlign:"center",marginTop:5}}>Farmin Fisheries</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
@@ -71,6 +74,7 @@ class Home extends Component{
                             />
                             <Text style={{fontSize:10,textAlign:"center",marginTop:5}}>Jarvis Fisheries</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
@@ -78,6 +82,7 @@ class Home extends Component{
                             />
                             <Text style={{fontSize:10,textAlign:"center",marginTop:5}}>Angel Fisheries</Text>
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.smallcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/pic1.png")} 
@@ -96,18 +101,21 @@ class Home extends Component{
                             style={{width:246,height:146,alignSelf:"center",marginTop:2, borderRadius:10}} 
                             />
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.bigcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/fishbanner.jpg")} 
                             style={{width:246,height:146,alignSelf:"center",marginTop:2, borderRadius:10}} 
                             />
                         </TouchableOpacity>
+
                         <TouchableOpacity style={styles.bigcard} onPress={()=> console.log("Pressed")}>
                             <Image 
                             source={require("../assets/fishbanner.jpg")} 
                             style={{width:246,height:146,alignSelf:"center",marginTop:2, borderRadius:10}} 
                             />
                         </TouchableOpacity>
+                        
                     </ScrollView>
                     <Text style={{textAlign:"left" ,fontWeight:"bold", marginTop:15, marginLeft:15}}>Recommended for you</Text>
                     
